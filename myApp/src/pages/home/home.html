@@ -8,11 +8,28 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <!-- Accession match en direct -->
+  <ion-card class="cards-list-demo">
+    <ion-card-header style="position: relative;">
+      Match en direct
+      <button ion-button class="accessCatButton" clear icon-right (click)='onClickMatchDirect(listPlayer)'> 
+        Aller au match 
+        <ion-icon name="play"></ion-icon>
+      </button>
+    </ion-card-header>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-list>
+      <!-- Le prochain match -->
+      <ion-card>
+        <button ion-item>        
+          <label class="date"> Dimanche 14 mai, 15h00 </label>
+          <label class="intitule"> CS Changé - Le Mans FC </label> 
+        </button>
+      </ion-card>
+    </ion-list>
+  </ion-card>
+  
+
+
 </ion-content>
