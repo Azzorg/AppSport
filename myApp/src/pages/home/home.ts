@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { MatchModel } from '../../models/MatchModel';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,12 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  match: MatchModel;
 
+  constructor(public navCtrl: NavController) {
+    console.log("Début");
   }
+
+
 
 }
