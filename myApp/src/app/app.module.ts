@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-/* Pages */ 
+/* Pages */
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { CalendarPage } from '../pages/calendar/calendar';
+import { NewMatchPage } from '../pages/new-match/new-match';
 
 /* Models */
 import { PlayerModel } from '../models/PlayerModel';
@@ -20,8 +22,8 @@ import { ParserbddProvider } from '../providers/parserbdd/parserbdd';
     MyApp,
     HomePage,
     ListPage,
-    PlayerModel,
-    MatchModel
+    CalendarPage,
+    NewMatchPage
   ],
   imports: [
     BrowserModule,
@@ -32,8 +34,8 @@ import { ParserbddProvider } from '../providers/parserbdd/parserbdd';
     MyApp,
     HomePage,
     ListPage,
-    PlayerModel,
-    MatchModel
+    CalendarPage,
+    NewMatchPage
   ],
   providers: [
     StatusBar,

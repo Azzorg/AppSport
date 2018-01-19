@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { CalendarPage } from '../pages/calendar/calendar';
 
 
 
@@ -16,7 +17,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
@@ -25,7 +26,7 @@ export class MyApp {
     this.pages = [
       { title: 'Accueil', component: HomePage },
       { title: 'Équipe', component: HomePage },
-      { title: 'Calendrier', component: HomePage },
+      { title: 'Calendrier', component: CalendarPage },
       { title: 'Statistiques', component: ListPage }
     ];
 
