@@ -12,6 +12,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
     console.log("Début");
+
+    //parserBdd.addMatch(this.match);
   }
 
 
