@@ -6,6 +6,7 @@ export class MatchModel {
     /** Variables */
     id: number;
     date: DateTime;
+    time: DateTime;
     teamAdName: string;
     scoreAd: number;
     scoreUs: number;
