@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MatchModel } from '../../models/MatchModel';
 
 /**
  * Generated class for the NewMatchPage page.
@@ -15,11 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NewMatchPage {
 
+  match: MatchModel;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.match = new MatchModel();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NewMatchPage');
   }
 
+  createMatch(){
+    console.log("Match", this.match);
+  }
 }

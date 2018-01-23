@@ -16,35 +16,38 @@
 
 <ion-content padding>
 
-  <form (ngSubmit)="logForm()">
+  <form (ngSubmit)="createMatch()">
 
     <!-- Nom de l'équipe adverse -->
     <ion-item>
       <ion-label floating>Adversaire</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="match.teamAdName" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
 
     <!-- Checkbox si le match est à domicile ou non -->
     <ion-item>
       <ion-label>Match à domicile</ion-label>
-      <ion-checkbox></ion-checkbox>
+      <ion-checkbox [(ngModel)]="match.isHome" [ngModelOptions]="{standalone: true}"></ion-checkbox>
     </ion-item>
 
     <!-- Date du match -->
     <ion-item>
       <ion-label>Date du match</ion-label>
-      <ion-datetime displayFormat="DD/MM/YYYY" max="2200" [(ngModel)]="matchDate"></ion-datetime>
+      <ion-datetime displayFormat="DD/MM/YYYY" max="2200" [(ngModel)]="match.date" [ngModelOptions]="{standalone: true}"></ion-datetime>
     </ion-item>
 
     <!-- Heure du match -->
     <ion-item>
       <ion-label>Heure du match</ion-label>
-      <ion-datetime displayFormat="HH:mm" [(ngModel)]="matchTime"></ion-datetime>
+      <ion-datetime displayFormat="HH:mm" [(ngModel)]="match.time" [ngModelOptions]="{standalone: true}"></ion-datetime>
     </ion-item>
 
 
     <!-- Bouton pour soumettre les informations relatives au match -->
-
+    <button ion-button type="submit" block icon-left>
+      <ion-icon name="calendar"></ion-icon>
+      Sauvegarder
+    </button>
 
   </form>
 
